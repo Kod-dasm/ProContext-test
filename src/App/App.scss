@@ -1,0 +1,90 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+.content-start {
+  justify-content: flex-start;
+}
+.content-end {
+  justify-content: flex-end;
+}
+.content-center {
+  justify-content: center;
+}
+.content-between {
+  justify-content: space-between;
+}
+.content-around {
+  justify-content: space-around;
+}
+.content-evenly {
+  justify-content: space-evenly;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-start-self {
+  align-self: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.flex-auto {
+  flex: 1 2 auto;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.border {
+  border: 1px solid black;
+}
+.checkbox {
+  transform: scale(1.5);
+}
+.main {
+  width: 1000px;
+  height: 600px;
+}
+.container {
+  width: 400px;
+  height: 550px;
+}
+.list {
+  width: 250px;
+}
+.arrowActive {
+  transform: rotate(90deg);
+}
+.rectangle-color-left {
+  width: 15px;
+  height: 15px;
+}
+.rectangle-color-right {
+  width: 12px;
+  height: 12px;
+}
