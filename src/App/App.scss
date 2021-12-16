@@ -51,14 +51,23 @@
 .flex-auto {
   flex: 1 2 auto;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .ml-10 {
   margin-left: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
 }
 .ml-20 {
   margin-left: 20px;
 }
 .mr-20 {
   margin-right: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
 }
 .border {
   border: 1px solid black;
@@ -68,11 +77,11 @@
 }
 .main {
   width: 1000px;
-  height: 600px;
+  height: 700px;
 }
 .container {
   width: 400px;
-  height: 550px;
+  height: 650px;
 }
 .list {
   width: 250px;
@@ -81,10 +90,17 @@
   transform: rotate(90deg);
 }
 .rectangle-color-left {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: none;
 }
 .rectangle-color-right {
   width: 12px;
   height: 12px;
+}
+.inputNumber {
+  width: 30px;
+  height: 15px;
 }

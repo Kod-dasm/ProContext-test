@@ -1,44 +1,75 @@
 <body class="flex flex-column items-center">
-  <header>
-
-  </header>
   <main class="main border flex content-around items-center">
     <div class="container border flex flex-column">
-      <div class="flex ml-20" v-for="list in lists">
-        <img src="/images/arrow.png" alt="" width="20px" height="20px" :class="{ arrowActive: list.isOpen }" @click="list.isOpen = !list.isOpen">
-        <input class="checkbox" type="checkbox" v-model="list.isVisible">
+      <div class="flex mt-20 ml-20" v-for="list in lists" :key="list.name">
+        <img
+          src="/images/arrow.png"
+          alt=""
+          width="20px"
+          height="20px"
+          :class="{ arrowActive: list.isOpen }"
+          @click="list.isOpen = !list.isOpen"
+        />
+        <input
+          class="checkbox ml-10 mr-10"
+          type="checkbox"
+          v-model="list.isVisible"
+        />
         <label for="">{{ list.name }}</label>
         <div v-if="list.isOpen">
-          <div v-for="item in list.items" class="list ml-20 flex content-between items-center">
+          <div
+            v-for="item in list.items"
+            :key="item.name"
+            class="list ml-20 flex content-between items-center"
+          >
             <div>
-              <input class="checkbox" type="checkbox" v-model="item.isVisible">
+              <input
+                class="checkbox"
+                type="checkbox"
+                v-model="item.isVisible"
+              />
               <label for="">{{ item.name }}</label>
             </div>
             <div>
-              <span class="count">{{ item.count }}</span>
-              <!-- <input v-model="item.count"> -->
-              <img class="rectangle-color-left ml-10" :style="{ backgroundColor: item.color }">
+              <input class="inputNumber" type="number" v-model="item.count" />
+              <input
+                class="rectangle-color-left ml-10"
+                type="color"
+                value="item.color"
+                v-model="item.color"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="container border flex flex-column">
-      <div class="border flex flex-column flex ml-20 mr-20" v-for="list in lists">
-        {{ list.name }}
-        <div v-if="list.isVisible">
-          <div v-for="item in list.items" class="list flex items-center">
-            <div v-if="item.isVisible" class="flex items-center">
-              <div v-for="count in item.count">
-                <img class="rectangle-color-right" :style="{ backgroundColor: item.color }">
+      <div
+        class="border flex flex-column flex mt-20 ml-20 mr-20"
+        v-for="list in lists"
+        :key="list.name"
+      >
+        <span class="ml-10">
+          {{ list.name }}
+          <div v-if="list.isVisible">
+            <div
+              v-for="item in list.items"
+              :key="item.name"
+              class="list flex items-center"
+            >
+              <div v-if="item.isVisible" class="flex items-center wrap">
+                <div v-for="count in Number(item.count)">
+                  <img
+                    class="rectangle-color-right"
+                    :style="{ backgroundColor: item.color }"
+                    @click="removeRectangle(item)"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </span>
       </div>
     </div>
   </main>
-  <footer>
-
-  </footer>
 </body>
